@@ -352,9 +352,10 @@ section#points-of-sale ul{
 }
 
 
-
-
-
+/*toggleClass example*/
+.open {
+    height: auto !important;
+}
 
 
 
