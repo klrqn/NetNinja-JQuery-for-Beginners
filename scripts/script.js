@@ -1,36 +1,20 @@
-//#10
+// check the value of a property by entering it into the first position of the css method
 
-var wrapper = "<div class='wrapper'>";
-var button = $('.button');
-var wrapped = true;
+console.log($("#social-nav").css("position")); // relative
+console.log($("#social-nav").css("top")); // -40px
 
-button[0].onclick = function(){
-	if (wrapped) {
-		$("section").unwrap();
-		wrapped = !wrapped;
-		button.text('wrap');
-	} else {
-		$("section").wrapAll(wrapper);
-		wrapped = !wrapped;
-		button.text('unwrap');
-	}
+// chained changed css properties
+$("#social-nav").css("top", "-200px").css("left", "300px"); //ok for one or two...
+// reset
+$("#social-nav").css("top", "-40px").css("left", "0px");
+
+// if you're changing a lot of values
+// pass through an object into the css method
+var objCSS = {
+	"top": "-40px",
+	"left": "300px",
+	"opacity": "0.7",
+	"border-top": "10px solid red"
 }
 
-// #11
-// .empty() - removes the inner HTML of an element
-// .remove() - removes an entire element.
-
-// button.empty();
-// $("#points-of-sale").empty();
-// button.remove();
-
-
-// #12 Changing Attributes
-// .removeAttr()	- removes an attribute completely
-// .attr()				- can read or set an attribute
-
-$("#contact img").removeAttr("alt");
-$("#contact img").attr("alt", 'location');
-
-console.log("the images attribute value is: " + $("#contact img").attr("alt"));
-
+$("#social-nav").css(objCSS);
