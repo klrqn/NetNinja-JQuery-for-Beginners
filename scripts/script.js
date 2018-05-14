@@ -1,22 +1,22 @@
-// $("header nav li:first").css({border: "2px solid red"});
-// $("header nav li:last").css({border: "2px solid green"});
 
+// // next method
+// $("#contact-methods").next().css({border: "3px solid red"});
 
-// $("#contact ul:first").css({border: "2px solid blue"});
-// $("#contact ul:last").css({border: "2px solid purple"});
+// // previous method
+// $("#social-nav").prev().css({border: "3px solid blue"});
 
-// $("header nav li:even").css({border: "3px dashed green"});
-// $("header nav li:odd").css({border: "3px dashed yellow"});
+// // parent method and (all) parents method
+// $(".banner-title").parent().css({border: "2px solid green"});
+// $(".banner-title").parents().css({border: "2px solid green"});
 
-// $("section:not('#contact')").css({border: "2px dashed black"});
+// // children
+// $("#social-nav").children().css({border: "2px solid purple"});
 
-// // greater than less than
-// $("#social-nav li:lt(2)").css({border: "5px solid blue"});
-// $("#social-nav li:gt(2)").css({border: "5px solid pink"});
+// // find !
+// $("#contact").find(".facebook").css({border: "3px solid orange"});
+// //vs
+// $("#contact .facebook")
+// // find is faster than the above
 
-// can be used to tag elements that have any attribute associated with them
-$("img[alt]").css({border: "2px dashed pink"});
-$("div[class]").css({border: "2px dashed pink"});
-$("img[alt=quote").css({border: "5px solid blue"});
-
-alert("api.jquery.com/category/selectors");
+// closest moves UP the DOM
+$("#social-nav").closest(".wrapper").css({border: "3px solid red"});
