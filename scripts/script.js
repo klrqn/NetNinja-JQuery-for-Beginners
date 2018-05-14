@@ -18,5 +18,10 @@
 // $("#contact .facebook")
 // // find is faster than the above
 
-// closest moves UP the DOM
-$("#social-nav").closest(".wrapper").css({border: "3px solid red"});
+// // closest moves UP the DOM
+// $("#social-nav").closest(".wrapper").css({border: "3px solid red"});
+
+// all methods chained together
+$("#contact-methods").css({ border: "2px solid red" })
+	.next().css({ border: "2px dashed green" })
+	.closest("section").css({ border: "2px solid blue" });
