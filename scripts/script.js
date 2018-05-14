@@ -26,13 +26,40 @@
 // 	.next().css({ border: "2px dashed green" })
 // 	.closest("section").css({ border: "2px solid blue" });
 
-var tweet = "<div style='margin: 20px; padding: 10px; background: #ddd'>The big fight live: Ham vs Cheese!</div>"
+// var tweet = "<div style='margin: 20px; padding: 10px; background: #ddd'>The big fight live: Ham vs Cheese!</div>"
 
-// $("#tweets div").append(tweet);
-// $("#tweets div").prepend(tweet);
+// // $("#tweets div").append(tweet);
+// // $("#tweets div").prepend(tweet);
 
-// $("#tweets div p").before(tweet);
-// $("#tweets div p").after(tweet);
+// // $("#tweets div p").before(tweet);
+// // $("#tweets div p").after(tweet);
 
-// $("#tweets div").html(tweet);
-$("#tweets div p").text(tweet);
+// // $("#tweets div").html(tweet);
+// $("#tweets div p").text(tweet);
+
+//#10
+//wrapping of elements, the parent wraps the child -> ul > li >/ul
+// wrap() unwrap() wrapAll()
+
+// // wrap each section individually
+// $("section").wrap("<div>");
+// // unwraps
+// $("section").unwrap("<div>");
+// // wraps all sections together in one div
+// $("section").wrapAll("<div>");
+
+var wrapper = "<div class='wrapper'>";
+var button = $('.button');
+var wrapped = true;
+
+button[0].onclick = function(){
+	if (wrapped) {
+		$("section").unwrap();
+		wrapped = !wrapped;
+		button.text('wrap');
+	} else {
+		$("section").wrapAll(wrapper);
+		wrapped = !wrapped;
+		button.text('unwrap');
+	}
+}
