@@ -31,9 +31,21 @@
 
 // console.log($('#lead-banner a')[0]);
 
-var button = ("#lead-banner a");
+// var button = ("#lead-banner a");
 
-$("#lead-banner a")[0].onclick = function() {
-	$("#points-of-sale").toggleClass('open');
-	return false;
-}
+// $("#lead-banner a")[0].onclick = function() {
+// 	$("#points-of-sale").toggleClass('open');
+// 	return false;
+// }
+
+// #15 Event Binding
+// on() binds an event to matched element/s
+// off() unbinds an event from matched element/s
+
+var myLis = $("#points-of-sale li");
+
+myLis.on('click', function(){
+	console.log('hello');
+	$(this).css("background", "pink");
+	myLis.off('click');
+});
