@@ -1,17 +1,13 @@
-// #18
-
 $(document).ready(function(){
 
-		$("*").on('click', function(e){
+	function animateComplete(){
+		alert('animation is complete');
+	}
 
-			console.log("the event type is: " + e.type);
-			console.log('the target is: ' + e.target);
-			console.log(e.target);
-			console.log(e.target.innerHTML);
-			console.log('x coordinate of the event is: ' + e.pageX);
-			console.log('y coordinate of the event is: ' + e.pageY);
-			e.stopPropagation();
+	$("section > h2").on("click", function(){
+
+		$(this).animate({"width" : "500px", "height": "50px"}, 2000, "linear", animateComplete);
+		// can only animate elements that have numeric values.
 	});
 
-
-})
+});
