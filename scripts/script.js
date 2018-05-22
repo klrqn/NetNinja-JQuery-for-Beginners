@@ -1,28 +1,17 @@
-// #17
+// #18
 
-$("#lead-banner").click(function() {
-	alert('you clicked the lead banner id')
-});
+$(document).ready(function(){
 
+		$("*").on('click', function(e){
 
-// list of jQuery Event Methods
-// https://www.w3schools.com/jquery/jquery_ref_events.asp
-
-$(document).on("ready", function() {
-	alert('on ready!');
-})
-
-//shorthand jquery! this particular event shorthand
-$(function(){
-	alert('everything goes in here');
-});
+			console.log("the event type is: " + e.type);
+			console.log('the target is: ' + e.target);
+			console.log(e.target);
+			console.log(e.target.innerHTML);
+			console.log('x coordinate of the event is: ' + e.pageX);
+			console.log('y coordinate of the event is: ' + e.pageY);
+			e.stopPropagation();
+	});
 
 
-$(window).on("load", function(){
-	console.log('this waits for the window to load to execute');
-});
-
-//shorthand for above
-$(window).load(function(){
-	console.log('see above');
 })
