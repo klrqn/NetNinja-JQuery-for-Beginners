@@ -1,19 +1,19 @@
 $(document).ready(function(){
 
-	function animateComplete(){
-		alert('animation is complete');
-	}
+	// $(".slide-button-up").on("click", function(){
 
-	$("section > h2").on("click", function(){
+	// 	$("#lead-banner").slideUp(500);
+	// });
 
-		// $(this).hide(1000).show(1000);
+	// $(".slide-button-down").on("click", function(){
 
+	// 	$("#lead-banner").slideDown(2000);
+	// });
 
+	$(".slide-button-up").on("click", function(){
+
+		$("#lead-banner").slideToggle(1000);
 	});
 
-	$("img[alt=map]").on("click", function(){
-
-		$("section > h2").toggle(1000);
-	})
 
 });
