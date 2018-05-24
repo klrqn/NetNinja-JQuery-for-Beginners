@@ -6,7 +6,14 @@ $(document).ready(function(){
 
 	$("section > h2").on("click", function(){
 
-		$(this).animate({"width" : "500px", "height": "50px"}, 2000, "linear", animateComplete);
+		$(this).fadeOut(2000).fadeIn(500);
+
+		$(this).fadeTo(200, 0.2)
+					 .fadeTo(2000, 0.8)
+					 .fadeTo(200, 0.2)
+					 .fadeTo(2000, 0.8)
+					 .fadeTo(200, 0.2)
+					 .fadeTo(2000, 0.8);
 		// can only animate elements that have numeric values.
 	});
 
