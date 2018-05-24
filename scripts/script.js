@@ -1,19 +1,26 @@
+
 $(document).ready(function(){
 
-	// $(".slide-button-up").on("click", function(){
+  var allQuotes = $('blockquote');
+  var currentQuote = 0;
 
-	// 	$("#lead-banner").slideUp(500);
-	// });
+  function changeQuote(){
 
-	// $(".slide-button-down").on("click", function(){
+    $(allQuotes[currentQuote]).fadeOut(500, function(){
 
-	// 	$("#lead-banner").slideDown(2000);
-	// });
+      if(currentQuote == allQuotes.length - 1){
+        currentQuote = 0;
+      } else {
+          currentQuote++;
+      }
 
-	$(".slide-button-up").on("click", function(){
+      $(allQuotes[currentQuote]).fadeIn(500);
 
-		$("#lead-banner").slideToggle(1000);
-	});
+    });
+
+  };
+
+  var quoteTimer = setInterval(changeQuote, 3000);
 
 
 });
