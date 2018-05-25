@@ -483,3 +483,5 @@ jQuery pluggins
 image sliders
 galleries
 and even the ability to make your own!
+
+Looking forward, lots to research and get better at!
